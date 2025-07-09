@@ -1,31 +1,33 @@
-# 🎬 Simple Movie Recommendation System
+# 📈 Apple Stock Price Predictor
 
-This is a content-based movie recommender using movie overviews and TF-IDF similarity to suggest similar movies.
+A simple machine learning project to predict Apple Inc. (AAPL) stock prices using historical data.
 
-## 🎯 Objective
-Recommend top 5 movies similar to a given movie based on plot descriptions.
+## 🧠 Objective
+To predict future stock prices using historical 'Close' price data via a regression model.
 
 ## 📁 Dataset
-- Files: `movies_metadata.csv`.
-- Source: [Kaggle Movie Dataset](https://www.kaggle.com/datasets)
-- Important column used: `overview`
+- Source: Yahoo Finance or other stock data provider
+- Format: CSV with columns like `Date`, `Open`, `High`, `Low`, `Close`, `Volume`
 
 ## 🛠️ Tools Used
 - Python
-- pandas
-- scikit-learn (TF-IDF Vectorizer, Cosine Similarity)
+- pandas, numpy
+- scikit-learn (Linear Regression, etc.)
+- matplotlib / seaborn
 - Google Colab
 
 ## 🧪 Workflow
-1. Load and clean dataset
-2. Use TF-IDF to vectorize movie overviews
-3. Compute cosine similarity
-4. Create title-to-index mapping
-5. Recommend top 5 similar movies
+1. Load dataset and clean missing values
+2. Convert 'Date' to datetime and set as index
+3. Select 'Close' price as target variable
+4. Train a regression model (e.g., LinearRegression)
+5. Predict and visualize results
 
 ## 🚀 How to Run
-1. Upload `movies_metadata.csv` to Google Drive
+1. Upload CSV to Google Drive
 2. Mount Drive in Google Colab
-3. Run `recommend_movies("Movie Title")` to get suggestions
+3. Run all cells to train and predict
+4. Modify model for improvements
+
 
 
